@@ -1,0 +1,17 @@
+version: "3"
+services:
+  dgraph:
+    image: dgraph/standalone:latest
+    ports:
+    - "9000:8000"
+    - "9090:8080"
+    - "9080:9080"
+  backend:
+    build: ./backend
+    ports:
+        - 3000:3000
+    env_file: .env
+    depends_on:
+      - dgraph
+volumes:
+  logvolume01: {}

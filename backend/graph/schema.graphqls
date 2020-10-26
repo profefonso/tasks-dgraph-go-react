@@ -1,0 +1,32 @@
+type Task {
+    id: ID!
+    title: String!
+    completed: Boolean!
+    category: Category!
+}
+
+type Category {
+    name: ID!
+    description: String!
+}
+
+type Query {
+  tasks: [Task!]!
+  categories: [Category!]!
+}
+
+input DataTask {
+  title: String!
+  completed: Boolean!
+  categoryId: String!
+}
+
+input DataCategory {
+  name: String!
+  description: String!
+}
+
+type Mutation {
+  createTask(input: DataTask!): Task!
+  createCategory(input: DataCategory!): Category!
+}

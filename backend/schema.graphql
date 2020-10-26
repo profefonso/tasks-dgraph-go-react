@@ -1,0 +1,12 @@
+type Task {
+    id: ID!
+    title: String!
+    completed: Boolean!
+    category: Category!
+}
+
+type Category {
+    name: String! @id
+    description: String
+    tasks: [Task] @hasInverse(field: category)
+}
