@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4ec5949-7a35-4727-bd73-b1c8da3ad415" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/backend/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gqlgen.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/gqlgen.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/graph/generated/generated.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/graph/generated/generated.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/graph/model/models_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/graph/model/models_gen.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/graph/schema.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/backend/graph/schema.graphqls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/graph/schema.resolvers.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/graph/schema.resolvers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="a4ec5949-7a35-4727-bd73-b1c8da3ad415" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +55,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create insert value in the dgraph backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create insert value in the dgraph backend" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -57,5 +78,9 @@
       <screen x="57" y="24" width="1543" height="876" />
     </state>
     <state x="628" y="286" key="#Go_Modules/57.24.1543.876@57.24.1543.876" timestamp="1603728020622" />
+    <state x="519" y="56" width="618" height="783" key="find.popup" timestamp="1603758012010">
+      <screen x="57" y="24" width="1543" height="876" />
+    </state>
+    <state x="519" y="56" width="618" height="783" key="find.popup/57.24.1543.876@57.24.1543.876" timestamp="1603758012010" />
   </component>
 </project>
