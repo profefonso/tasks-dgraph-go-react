@@ -7,11 +7,11 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"main.go/graph"
-	"main.go/graph/generated"
+	"github.com/profefonso/tasks-dgraph-go-react/graph"
+	"github.com/profefonso/tasks-dgraph-go-react/graph/generated"
 )
 
-const defaultPort = "9075"
+const defaultPort = "8085"
 
 func main() {
 	port := os.Getenv("PORT")

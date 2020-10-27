@@ -3,6 +3,7 @@
 package model
 
 type Category struct {
+	ID          string `json:"id"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
 }
@@ -14,13 +15,13 @@ type DataCategory struct {
 
 type DataTask struct {
 	Title      string `json:"title"`
-	Completed  bool   `json:"completed"`
 	CategoryID string `json:"categoryId"`
+	Completed  bool   `json:"completed"`
 }
 
 type Task struct {
 	ID        string    `json:"id"`
 	Title     string    `json:"title"`
-	Completed bool      `json:"completed"`
 	Category  *Category `json:"category"`
+	Completed bool      `json:"completed"`
 }

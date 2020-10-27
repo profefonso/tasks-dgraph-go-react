@@ -13,8 +13,7 @@ then
 fi
 sleep 15
 curl -X POST $DB_HOST:$DB_PORT/admin/schema --data-binary '@/usr/src/schema.graphql'
-cd /usr/src
-ls
+
 go run server.go
 
  

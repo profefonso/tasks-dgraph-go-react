@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-ENV GO111MODULE=auto \
+ENV GO111MODULE=on \
     CGO_ENABLED=0 \
     GOOS=linux \
     GOARCH=amd64
@@ -16,12 +16,6 @@ RUN apk add --update \
     && rm -rf /var/cache/apk/*
 
 COPY . .
-
-RUN go get github.com/99designs/gqlgen
-
-# RUN go build server.go .
-
-WORKDIR /dist
 
 # RUN cp /build/main .
 

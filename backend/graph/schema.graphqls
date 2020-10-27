@@ -1,13 +1,14 @@
 type Task {
-    id: ID!
-    title: String!
-    completed: Boolean!
-    category: Category!
+  id: ID!
+  title: String!
+  category: Category!
+  completed: Boolean!
 }
 
 type Category {
-    name: ID!
-    description: String!
+  id: ID!
+  name: String!
+  description: String!
 }
 
 type Query {
@@ -17,9 +18,10 @@ type Query {
 
 input DataTask {
   title: String!
-  completed: Boolean!
   categoryId: String!
+  completed: Boolean!
 }
+
 
 input DataCategory {
   name: String!
@@ -29,4 +31,6 @@ input DataCategory {
 type Mutation {
   createTask(input: DataTask!): Task!
   createCategory(input: DataCategory!): Category!
+  updateTask(id: ID!, input: DataTask!): Task!
+  updateCategory(id: ID!, input: DataCategory!): Category!
 }

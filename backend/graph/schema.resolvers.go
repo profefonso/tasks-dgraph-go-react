@@ -5,14 +5,17 @@ package graph
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
+	"log"
+	"math/rand"
 
-	"main.go/graph/generated"
-	"main.go/graph/model"
+	"github.com/dgraph-io/dgo/v200/protos/api"
+	"github.com/profefonso/tasks-dgraph-go-react/graph/generated"
+	"github.com/profefonso/tasks-dgraph-go-react/graph/model"
 )
 
 func (r *mutationResolver) CreateTask(ctx context.Context, input model.DataTask) (*model.Task, error) {
-	
 	panic(fmt.Errorf("not implemented"))
 }
 
@@ -20,16 +23,46 @@ func (r *mutationResolver) CreateCategory(ctx context.Context, input model.DataC
 	panic(fmt.Errorf("not implemented"))
 }
 
+func (r *mutationResolver) UpdateTask(ctx context.Context, id string, input model.DataTask) (*model.Task, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *mutationResolver) UpdateCategory(ctx context.Context, id string, input model.DataCategory) (*model.Category, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
 func (r *queryResolver) Tasks(ctx context.Context) ([]*model.Task, error) {
 	var tasks []*model.Task
-	dummyTask := model.Task{
-		Title: "Tarea dummy",
+
+	dgraphClient := DgraphClient()
+	txn := dgraphClient.NewTxn()
+	defer txn.Discard(ctx)
+
+	task := &model.Task{
+		ID:        fmt.Sprintf("T%d", rand.Int()),
+		Title:     "entreda_descrip",
+		Category:  &model.Category{ID: "87897987", Name: "Nova"},
 		Completed: false,
-		Category: &model.Category{Name: "testC", Description: "1212321"},
 	}
-	tasks = append(tasks, &dummyTask)
+
+	tasks = append(tasks, task)
+
+	pb, err := json.Marshal(task)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	mu := &api.Mutation{
+		SetJson: pb,
+	}
+	res, err := txn.Mutate(ctx, mu)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(res)
+
 	return tasks, nil
-	
 	panic(fmt.Errorf("not implemented"))
 }
 
